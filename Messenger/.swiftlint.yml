@@ -1,0 +1,70 @@
+disabled_rules:
+  - file_length
+  - function_body_length
+  - type_body_length
+  - large_tuple
+  - trailing_whitespace
+  - block_based_kvo
+  
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+  - closure_end_indentation
+  - closure_spacing
+  - first_where
+  - nimble_operator
+  - operator_usage_whitespace
+  - redundant_nil_coalescing
+  - multiline_parameters
+  - extension_access_modifier
+  - implicit_return
+  - protocol_property_accessors_order
+  - attributes
+  
+excluded:
+  - Carthage
+  - Pods
+  - fastlane
+  - XCode Templates
+
+
+line_length:
+  warning: 180
+  ignores_comments: true
+
+identifier_name:
+  min_length:
+    warning: 3
+  excluded:
+    - id
+    - url
+
+cyclomatic_complexity:
+  ignores_case_statements: true
+
+function_parameter_count:
+  warning: 7
+  error: 10
+
+custom_rules:
+  double_space: # from https://github.com/IBM-Swift/Package-Builder
+    include: "*.swift"
+    name: "Double space"
+    regex: '([a-z,A-Z] \s+)'
+    message: "Double space between keywords"
+    match_kinds: keyword
+    severity: warning
+
+  comments_space: # from https://github.com/brandenr/swiftlintconfig
+    name: "Space After Comment"
+    regex: '(^ *//\w+)'
+    message: "There should be a space after //"
+    severity: warning
+
+  unnecessary_type: # from https://github.com/brandenr/swiftlintconfig
+    name: "Unnecessary Type"
+    regex: '[ a-zA-Z0-9]*(?:let|var) [ a-zA-Z0-9]*: ([a-zA-Z0-9]*)[ ]*= \1'
+    message: "Type Definition Not Needed"
+    severity: warning
+
+reporter: "xcode"

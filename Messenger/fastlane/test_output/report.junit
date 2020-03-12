@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='PopFlyXP-Core-Tests.xctest' tests='1' failures='0'>
+  <testsuite name='PopFlyXP_Core_Tests.NetworkTests' tests='1' failures='0'>
+    <testcase classname='PopFlyXP_Core_Tests.NetworkTests' name='testRandom' time='0.001'/>
+  </testsuite>
+</testsuites>
